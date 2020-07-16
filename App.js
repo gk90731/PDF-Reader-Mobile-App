@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
 import {WebView} from 'react-native-webview';
-import { Constants } from 'expo';
 import NavigationBar from 'react-native-navbar';
 // import PDFView from 'react-native-view-pdf/lib/index';
 // import PDFView from 'react-native-view-pdf';
@@ -35,7 +34,7 @@ class App extends Component {
     let yourPDFURI = {uri:'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true};
     const resourceType = 'url';
     return ( 
-    <View style={{flex:1,paddingTop: 25}}>
+    <View style={{flex:1}}>
         <WebView
           bounces={false}
           scrollEnabled={false} 
@@ -47,13 +46,4 @@ class App extends Component {
  
 export default App;
 
-const styles = StyleSheet.create({
-  navigation: {
-    backgroundColor:"dodgerblue",
-    paddingRight:25,
-    marginTop:20
-  },
-  statusBar: {
-    
-  }
-});
+
